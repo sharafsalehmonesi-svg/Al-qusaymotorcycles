@@ -6,371 +6,63 @@
 <meta name="theme-color" content="#09090b">
 <meta name="description" content="وكالة القصي AL-QUSAY للدراجات النارية في صنعاء. خبرة في الاستيراد منذ 2016.">
 <title>وكالة القصي AL-QUSAY | الدراجات النارية</title>
-
 <style>
-:root{
---bg:#09090b;--panel:#151519;--gold:#f7bd16;
---red:#e52d36;--white:#fff;--muted:#c0c0c8;--line:#303036
-}
+:root{--bg:#09090b;--panel:#151519;--gold:#f7bd16;--red:#e52d36;--white:#fff;--muted:#c0c0c8;--line:#303036}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--bg);color:var(--white);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.container{width:min(1200px,92%);margin:auto}
-.topbar{background:#050506;border-bottom:1px solid #333;font-size:13px;color:#ddd}
-.topbar .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:8px 0}
-.header{position:sticky;top:0;z-index:20;background:#09090bf5;border-bottom:1px solid #333}
-.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:900}
-.brand-mark{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:3px solid var(--gold);color:var(--gold);font-size:24px;background:#000;box-shadow:0 0 20px #f7bd1630}
-.brand-name{font-size:19px;line-height:1.4}
-.brand-name small{display:block;font-size:10px;color:var(--gold);letter-spacing:2px;direction:ltr}
-.navlinks{display:flex;align-items:center;gap:20px;font-size:14px}
-.navlinks a:hover{color:var(--gold)}
-.menu-btn{display:none;background:#17171b;color:white;border:1px solid #555;border-radius:8px;padding:8px 12px}
-.hero{position:relative;min-height:620px;display:flex;align-items:center;overflow:hidden;background:#111}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.43}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#09090b20,#09090bea),linear-gradient(0deg,#09090b,transparent 55%)}
-.hero-content{position:relative;z-index:1;max-width:730px;padding:70px 0}
-.eyebrow{color:var(--gold);font-size:14px;font-weight:bold}
-h1{font-size:clamp(38px,6vw,72px);line-height:1.25;margin:18px 0;font-weight:900}
-h1 span,.gold{color:var(--gold)}
-.hero p{font-size:18px;color:#eee;max-width:650px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:8px;font-weight:bold;margin:3px}
-.btn-gold{background:var(--gold);color:#111}
-.btn-outline{border:1px solid #888;background:#1118}
-.btn:hover{transform:translateY(-2px)}
-.hero-stats{display:flex;gap:25px;flex-wrap:wrap;margin-top:35px}
-.stat{border-right:2px solid var(--gold);padding-right:12px}
-.stat strong{display:block;font-size:23px}
-.stat span{color:var(--muted);font-size:12px}
-.section{padding:75px 0}
-.section-head{text-align:center;max-width:800px;margin:0 auto 35px}
-.section-head h2{font-size:clamp(28px,4vw,43px);line-height:1.4;margin:10px 0}
-.section-head p{color:var(--muted)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.about-photo{position:relative}
-.about-photo img{width:100%;height:420px;object-fit:cover;border-radius:14px;border:1px solid #444}
-.photo-tag{position:absolute;bottom:15px;right:15px;background:var(--gold);color:#111;padding:9px 14px;border-radius:7px;font-weight:bold}
-.about-copy p{color:#ccc}
-.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
-.feature{background:var(--panel);border:1px solid var(--line);padding:13px;border-radius:9px}
-.feature b{display:block;color:var(--gold)}
-.feature span{font-size:12px;color:var(--muted)}
-.products{background:#101014}
-.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.product-card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden;transition:.2s}
-.product-card:hover{transform:translateY(-4px);border-color:var(--gold)}
-.product-image{height:290px;background:#eee;cursor:pointer}
-.product-image img{width:100%;height:100%;object-fit:cover}
-.product-info{padding:15px}
-.product-info h3{margin:0 0 5px;font-size:17px}
-.product-info p{margin:0;color:var(--muted);font-size:13px}
-.pill{display:inline-block;color:var(--gold);border:1px solid #68521b;border-radius:20px;padding:3px 9px;font-size:11px;margin-top:10px}
-.details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.detail{background:linear-gradient(145deg,#19191e,#0e0e11);border:1px solid var(--line);border-radius:12px;padding:22px}
-.detail-icon{font-size:28px;color:var(--gold)}
-.detail h3{margin:8px 0}
-.detail p{color:var(--muted);font-size:14px;margin:0}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.contact-panel{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
-.contact-row{display:flex;gap:13px;align-items:flex-start;padding:15px 0;border-bottom:1px solid var(--line)}
-.contact-row:last-child{border:0}
-.contact-icon{min-width:42px;height:42px;border-radius:10px;background:#f7bd1618;color:var(--gold);display:grid;place-items:center;font-size:20px}
-.contact-row small{display:block;color:var(--muted)}
-.contact-row a:hover{color:var(--gold)}
-.social-box{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-.footer{border-top:1px solid var(--line);padding:25px 0;color:#bbb;font-size:13px}
-.footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.floating{position:fixed;bottom:18px;left:15px;z-index:25;background:#1ebd5a;color:#fff;border-radius:30px;padding:11px 17px;font-weight:bold;box-shadow:0 6px 20px #0008}
-.lightbox{position:fixed;inset:0;z-index:50;background:#000e;display:none;align-items:center;justify-content:center;padding:20px}
-.lightbox.open{display:flex}
-.lightbox img{max-width:95%;max-height:88vh;object-fit:contain}
-.lightbox button{position:absolute;top:15px;left:15px;background:#222;color:white;border:1px solid #777;border-radius:50%;width:44px;height:44px;font-size:25px}
-.notice{font-size:12px;color:#999}
-@media(max-width:850px){
-.navlinks{display:none;position:absolute;top:78px;right:0;left:0;background:#101014;padding:18px 5%;border-bottom:1px solid #333;flex-direction:column;align-items:stretch}
-.navlinks.open{display:flex}
-.menu-btn{display:block}
-.about-grid,.contact-grid{grid-template-columns:1fr}
-.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
-.details-grid{grid-template-columns:repeat(2,1fr)}
-.hero{min-height:570px}
-.about-photo img{height:350px}
-}
-@media(max-width:560px){
-.topbar .container{justify-content:center;text-align:center}
-.brand-name{font-size:16px}
-.brand-mark{width:44px;height:44px}
-.hero{min-height:570px}
-.hero-content{padding:55px 0}
-.hero p{font-size:16px}
-.hero-stats{gap:13px}
-.stat strong{font-size:18px}
-.section{padding:55px 0}
-.gallery,.details-grid,.feature-list{grid-template-columns:1fr}
-.product-image{height:320px}
-.about-photo img{height:290px}
-.floating{bottom:12px;left:10px;font-size:13px}
-}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Tahoma,Arial,sans-serif;line-height:1.8;position:relative;isolation:isolate}
+/* شعار SH كعلامة مائية ثابتة في خلفية الموقع */
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:url('sh-logo.png');background-repeat:no-repeat;background-position:center center;background-size:min(58vw,520px);opacity:.075}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{width:min(1200px,92%);margin:auto}
+.topbar{background:#050506;border-bottom:1px solid #333;font-size:13px;color:#ddd}.topbar .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:8px 0}
+.header{position:sticky;top:0;z-index:20;background:#09090bf5;border-bottom:1px solid #333}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{display:flex;align-items:center;gap:12px;font-weight:900}
+.brand-mark{width:52px;height:52px;border-radius:50%;display:block;object-fit:cover;border:2px solid var(--gold);background:#000;box-shadow:0 0 20px #f7bd1630}.brand-name{font-size:19px;line-height:1.4}.brand-name small{display:block;font-size:10px;color:var(--gold);letter-spacing:2px;direction:ltr}
+.navlinks{display:flex;align-items:center;gap:20px;font-size:14px}.navlinks a:hover{color:var(--gold)}.menu-btn{display:none;background:#17171b;color:white;border:1px solid #555;border-radius:8px;padding:8px 12px}
+.hero{position:relative;min-height:620px;display:flex;align-items:center;overflow:hidden;background:#111}.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.43}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#09090b20,#09090bea),linear-gradient(0deg,#09090b,transparent 55%)}.hero-content{position:relative;z-index:1;max-width:730px;padding:70px 0}
+.eyebrow{color:var(--gold);font-size:14px;font-weight:bold}h1{font-size:clamp(38px,6vw,72px);line-height:1.25;margin:18px 0;font-weight:900}h1 span,.gold{color:var(--gold)}.hero p{font-size:18px;color:#eee;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:8px;font-weight:bold;margin:3px;transition:.2s}.btn-gold{background:var(--gold);color:#111}.btn-outline{border:1px solid #888;background:#1118}.btn:hover{transform:translateY(-2px)}
+.hero-stats{display:flex;gap:25px;flex-wrap:wrap;margin-top:35px}.stat{border-right:2px solid var(--gold);padding-right:12px}.stat strong{display:block;font-size:23px}.stat span{color:var(--muted);font-size:12px}
+.section{padding:75px 0}.section-head{text-align:center;max-width:800px;margin:0 auto 35px}.section-head h2{font-size:clamp(28px,4vw,43px);line-height:1.4;margin:10px 0}.section-head p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.about-photo{position:relative}.about-photo img{width:100%;height:420px;object-fit:cover;border-radius:14px;border:1px solid #444}.photo-tag{position:absolute;bottom:15px;right:15px;background:var(--gold);color:#111;padding:9px 14px;border-radius:7px;font-weight:bold}.about-copy p{color:#ccc}.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.feature{background:#151519eF;border:1px solid var(--line);padding:13px;border-radius:9px}.feature b{display:block;color:var(--gold)}.feature span{font-size:12px;color:var(--muted)}
+.products{background:#101014eF}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.product-card{background:#151519f2;border:1px solid var(--line);border-radius:13px;overflow:hidden;transition:.2s}.product-card:hover{transform:translateY(-4px);border-color:var(--gold)}.product-image{height:290px;background:#eee;cursor:pointer}.product-image img{width:100%;height:100%;object-fit:cover}.product-info{padding:15px}.product-info h3{margin:0 0 5px;font-size:17px}.product-info p{margin:0;color:var(--muted);font-size:13px}.pill{display:inline-block;color:var(--gold);border:1px solid #68521b;border-radius:20px;padding:3px 9px;font-size:11px;margin-top:10px}
+/* معرض الفيديوهات */
+.videos-section{background:linear-gradient(180deg,#09090bea,#151519f5)}.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.video-card{overflow:hidden;background:#151519;border:1px solid var(--line);border-radius:14px;transition:.2s}.video-card:hover{border-color:var(--gold);transform:translateY(-3px)}.video-frame{position:relative;width:100%;aspect-ratio:16/9;background:#000}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.video-info{padding:13px 16px}.video-info h3{font-size:16px;margin:0;color:var(--gold)}.video-info p{margin:4px 0 0;color:var(--muted);font-size:12px}
+.details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.detail{background:linear-gradient(145deg,#19191ef2,#0e0e11f2);border:1px solid var(--line);border-radius:12px;padding:22px}.detail-icon{font-size:28px;color:var(--gold)}.detail h3{margin:8px 0}.detail p{color:var(--muted);font-size:14px;margin:0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-panel{padding:25px;background:#151519f2;border:1px solid var(--line);border-radius:14px}.contact-row{display:flex;gap:13px;align-items:flex-start;padding:15px 0;border-bottom:1px solid var(--line)}.contact-row:last-child{border:0}.contact-icon{min-width:42px;height:42px;border-radius:10px;background:#f7bd1618;color:var(--gold);display:grid;place-items:center;font-size:20px}.contact-row small{display:block;color:var(--muted)}.contact-row a:hover{color:var(--gold)}.social-box{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.footer{border-top:1px solid var(--line);padding:25px 0;color:#bbb;font-size:13px;background:#09090bf2}.footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.floating{position:fixed;bottom:18px;left:15px;z-index:25;background:#1ebd5a;color:#fff;border-radius:30px;padding:11px 17px;font-weight:bold;box-shadow:0 6px 20px #0008}.lightbox{position:fixed;inset:0;z-index:50;background:#000e;display:none;align-items:center;justify-content:center;padding:20px}.lightbox.open{display:flex}.lightbox img{max-width:95%;max-height:88vh;object-fit:contain}.lightbox button{position:absolute;top:15px;left:15px;background:#222;color:white;border:1px solid #777;border-radius:50%;width:44px;height:44px;font-size:25px}.notice{font-size:12px;color:#999}
+@media(max-width:850px){.navlinks{display:none;position:absolute;top:78px;right:0;left:0;background:#101014;padding:18px 5%;border-bottom:1px solid #333;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.menu-btn{display:block}.about-grid,.contact-grid{grid-template-columns:1fr}.gallery,.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.details-grid{grid-template-columns:repeat(2,1fr)}.hero{min-height:570px}.about-photo img{height:350px}}
+@media(max-width:560px){body:before{background-size:min(85vw,400px);opacity:.06}.topbar .container{justify-content:center;text-align:center}.brand-name{font-size:16px}.brand-mark{width:44px;height:44px}.hero{min-height:570px}.hero-content{padding:55px 0}.hero p{font-size:16px}.hero-stats{gap:13px}.stat strong{font-size:18px}.section{padding:55px 0}.gallery,.video-grid,.details-grid,.feature-list{grid-template-columns:1fr}.product-image{height:320px}.about-photo img{height:290px}.floating{bottom:12px;left:10px;font-size:13px}}
 </style>
 </head>
-
 <body>
-<div class="topbar">
-<div class="container">
-<span>📍 صنعاء – نقم – أمام محطة الفلاح</span>
-<span>خبرة في الاستيراد منذ عام 2016</span>
-</div>
-</div>
-
-<header class="header">
-<div class="container nav">
-<a class="brand" href="#home" aria-label="وكالة القصي">
-<span class="brand-mark">SH</span>
-<span class="brand-name">وكالة القصي
-<small>AL-QUSAY MOTORCYCLES</small></span>
-</a>
+<div class="topbar"><div class="container"><span>📍 صنعاء – نقم – أمام محطة الفلاح</span><span>خبرة في الاستيراد منذ عام 2016</span></div></div>
+<header class="header"><div class="container nav">
+<a class="brand" href="#home" aria-label="وكالة القصي"><img class="brand-mark" src="sh-logo.png" alt="شعار SH"><span class="brand-name">وكالة القصي<small>AL-QUSAY MOTORCYCLES</small></span></a>
 <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰ القائمة</button>
-<nav class="navlinks" id="navlinks">
-<a href="#home">الرئيسية</a>
-<a href="#about">من نحن</a>
-<a href="#models">الدراجات</a>
-<a href="#features">مميزاتنا</a>
-<a href="#contact">تواصل معنا</a>
-</nav>
-</div>
-</header>
-
+<nav class="navlinks" id="navlinks"><a href="#home">الرئيسية</a><a href="#about">من نحن</a><a href="#models">الدراجات</a><a href="#videos">الفيديوهات</a><a href="#features">مميزاتنا</a><a href="#contact">تواصل معنا</a></nav>
+</div></header>
 <main>
-<section class="hero" id="home">
-<img class="hero-bg" src="1000618535.png" alt="دراجة القصي النارية">
-<div class="container">
-<div class="hero-content">
-<span class="eyebrow">قوة • أناقة • ثقة</span>
-<h1>دراجات <span>القصي</span><br>حيث تلتقي القوة بالأناقة</h1>
-<p>منذ عام 2016، نعمل على استيراد الدراجات النارية بعناية، ونحرص على تقديم خيارات تجمع بين الأداء القوي والتصميم المميز لتناسب احتياجات عملائنا.</p>
-<div class="actions">
-<a class="btn btn-gold" href="#models">اكتشف دراجاتنا ←</a>
-<a class="btn btn-outline" href="https://wa.me/967772203792" target="_blank" rel="noopener">تواصل عبر واتساب</a>
-</div>
-<div class="hero-stats">
-<div class="stat"><strong>2016</strong><span>بداية رحلتنا</span></div>
-<div class="stat"><strong>AL-QUSAY</strong><span>اسم نعتز به</span></div>
-<div class="stat"><strong>SH</strong><span>هويتنا التجارية</span></div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section" id="about">
-<div class="container about-grid">
-<div class="about-photo">
-<img src="1000394755.jpg" alt="صورة من مجموعة وكالة القصي" loading="lazy">
-<span class="photo-tag">رحلتنا بدأت عام 2016</span>
-</div>
-<div class="about-copy">
-<span class="eyebrow">قصتنا وهويتنا</span>
-<h2>خبرة تمتد منذ 2016… <span class="gold">وطموح نحو الأفضل</span></h2>
-<p>بدأت رحلتنا في استيراد الدراجات النارية واضعين هدفًا واضحًا: تقديم دراجات تجمع بين الأداء العملي والتصميم الأنيق.</p>
-<p>نحرص على عرض موديلات متنوعة وصور واضحة، ونساعد عملاءنا على التواصل معنا للاستفسار عن الموديلات والمواصفات والتوفر.</p>
-<p><strong class="gold">القصي.. حيث تلتقي القوة بالأناقة.</strong></p>
-<div class="feature-list">
-<div class="feature"><b>خبرة منذ 2016</b><span>رحلة مستمرة من العمل والتطوير</span></div>
-<div class="feature"><b>موديلات متنوعة</b><span>خيارات تناسب احتياجات مختلفة</span></div>
-<div class="feature"><b>اهتمام بالتفاصيل</b><span>صور واضحة للدراجات</span></div>
-<div class="feature"><b>قريبون منك</b><span>تواصل مباشر مع الوكالة</span></div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="section products" id="models">
-<div class="container">
-<div class="section-head">
-<span class="eyebrow">معرض الموديلات</span>
-<h2>اكتشف دراجات <span class="gold">AL-QUSAY</span></h2>
-<p>تصفح صور الدراجات من مجموعة الوكالة. اضغط على أي صورة لعرضها بحجم أكبر.</p>
-</div>
-<div class="gallery" id="gallery"></div>
-</div>
-</section>
-
-<section class="section" id="features">
-<div class="container">
-<div class="section-head">
-<span class="eyebrow">لماذا القصي؟</span>
-<h2>قوة في الأداء، وأناقة في التفاصيل</h2>
-<p>تواصل معنا للاستفسار عن الدراجات والموديلات المتوفرة.</p>
-</div>
-<div class="details-grid">
-<article class="detail"><div class="detail-icon">⚙</div><h3>الأداء العملي</h3><p>دراجات للاستخدام اليومي ومتطلبات العمل والتنقل.</p></article>
-<article class="detail"><div class="detail-icon">✦</div><h3>تصميم مميز</h3><p>ألوان وتفاصيل تمنح كل موديل طابعه الخاص.</p></article>
-<article class="detail"><div class="detail-icon">◈</div><h3>معرض صور</h3><p>تصفح صور الدراجات وتفاصيلها قبل التواصل.</p></article>
-<article class="detail"><div class="detail-icon">⌖</div><h3>موقع الوكالة</h3><p>صنعاء، نقم، أمام محطة الفلاح.</p></article>
-<article class="detail"><div class="detail-icon">☎</div><h3>تواصل مباشر</h3><p>اتصل أو راسلنا للاستفسار عن الموديلات.</p></article>
-<article class="detail"><div class="detail-icon">SH</div><h3>هوية القصي</h3><p>علامة AL-QUSAY وشعار SH في تصميم متناسق.</p></article>
-</div>
-</div>
-</section>
-
-<section class="section" id="contact">
-<div class="container">
-<div class="section-head">
-<span class="eyebrow">نحن هنا لخدمتك</span>
-<h2>تواصل مع <span class="gold">وكالة القصي</span></h2>
-<p>للاستفسار عن الدراجات والموديلات المتوفرة، تواصل معنا مباشرة.</p>
-</div>
-<div class="contact-grid">
-<div class="contact-panel">
-<h3>بيانات التواصل</h3>
-<div class="contact-row">
-<span class="contact-icon">☎</span>
-<div><b>أرقام الهاتف</b><small>اضغط على الرقم للاتصال</small>
-<div><a href="tel:+967772203792">772203792</a> · <a href="tel:+967771376413">771376413</a> · <a href="tel:+967777074371">777074371</a></div>
-</div>
-</div>
-<div class="contact-row">
-<span class="contact-icon">⌖</span>
-<div><b>عنوان الوكالة</b><small>صنعاء، نقم، أمام محطة الفلاح</small></div>
-</div>
-<div class="contact-row">
-<span class="contact-icon">f</span>
-<div><b>فيسبوك</b><small><a href="https://www.facebook.com/share/1CLP3ztH4h/" target="_blank" rel="noopener">تابع صفحة دراجات القصي على فيسبوك ↗</a></small></div>
-</div>
-<div class="social-box">
-<a class="btn btn-gold" href="https://wa.me/967772203792" target="_blank" rel="noopener">راسلنا عبر واتساب</a>
-<a class="btn btn-outline" href="https://www.facebook.com/share/1CLP3ztH4h/" target="_blank" rel="noopener">صفحتنا على فيسبوك</a>
-</div>
-</div>
-
-<div class="contact-panel">
-<div class="brand-mark">SH</div>
-<h3>القصي.. حيث تلتقي القوة بالأناقة</h3>
-<p style="color:#c8c8cf">منذ عام 2016، نسعى إلى تقديم خيارات متنوعة من الدراجات النارية لعملائنا.</p>
-<p class="gold">AL-QUSAY MOTORCYCLES</p>
-<p class="notice">تُؤكد الأسعار والمواصفات والتوفر مباشرة من الوكالة قبل الشراء.</p>
-</div>
-</div>
-</div>
-</section>
+<section class="hero" id="home"><img class="hero-bg" src="1000618535.png" alt="دراجة القصي النارية"><div class="container"><div class="hero-content"><span class="eyebrow">قوة • أناقة • ثقة</span><h1>دراجات <span>القصي</span><br>حيث تلتقي القوة بالأناقة</h1><p>منذ عام 2016، نعمل على استيراد الدراجات النارية بعناية، ونحرص على تقديم خيارات تجمع بين الأداء القوي والتصميم المميز لتناسب احتياجات عملائنا.</p><div class="actions"><a class="btn btn-gold" href="#models">اكتشف دراجاتنا ←</a><a class="btn btn-outline" href="https://wa.me/967772203792" target="_blank" rel="noopener">تواصل عبر واتساب</a></div><div class="hero-stats"><div class="stat"><strong>2016</strong><span>بداية رحلتنا</span></div><div class="stat"><strong>AL-QUSAY</strong><span>اسم نعتز به</span></div><div class="stat"><strong>SH</strong><span>هويتنا التجارية</span></div></div></div></div></section>
+<section class="section" id="about"><div class="container about-grid"><div class="about-photo"><img src="1000394755.jpg" alt="صورة من مجموعة وكالة القصي" loading="lazy"><span class="photo-tag">رحلتنا بدأت عام 2016</span></div><div class="about-copy"><span class="eyebrow">قصتنا وهويتنا</span><h2>خبرة تمتد منذ 2016… <span class="gold">وطموح نحو الأفضل</span></h2><p>بدأت رحلتنا في استيراد الدراجات النارية واضعين هدفًا واضحًا: تقديم دراجات تجمع بين الأداء العملي والتصميم الأنيق.</p><p>نحرص على عرض موديلات متنوعة وصور واضحة، ونساعد عملاءنا على التواصل معنا للاستفسار عن الموديلات والمواصفات والتوفر.</p><p><strong class="gold">القصي.. حيث تلتقي القوة بالأناقة.</strong></p><div class="feature-list"><div class="feature"><b>خبرة منذ 2016</b><span>رحلة مستمرة من العمل والتطوير</span></div><div class="feature"><b>موديلات متنوعة</b><span>خيارات تناسب احتياجات مختلفة</span></div><div class="feature"><b>اهتمام بالتفاصيل</b><span>صور واضحة للدراجات</span></div><div class="feature"><b>قريبون منك</b><span>تواصل مباشر مع الوكالة</span></div></div></div></div></section>
+<section class="section products" id="models"><div class="container"><div class="section-head"><span class="eyebrow">معرض الموديلات</span><h2>اكتشف دراجات <span class="gold">AL-QUSAY</span></h2><p>تصفح صور الدراجات من مجموعة الوكالة. اضغط على أي صورة لعرضها بحجم أكبر.</p></div><div class="gallery" id="gallery"></div></div></section>
+<section class="section videos-section" id="videos"><div class="container"><div class="section-head"><span class="eyebrow">شاهد واستكشف</span><h2>فيديوهات دراجات <span class="gold">القصي</span></h2><p>شاهد مقاطع من دراجات AL-QUSAY، ويمكنك تشغيل الفيديو مباشرة من الموقع.</p></div><div class="video-grid">
+<article class="video-card"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/en56KskjH18" title="فيديو دراجات القصي الأول" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-info"><h3>دراجات القصي – الفيديو الأول</h3><p>AL-QUSAY MOTORCYCLES</p></div></article>
+<article class="video-card"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/4r5pWb0dbFQ" title="فيديو دراجات القصي الثاني" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-info"><h3>دراجات القصي – الفيديو الثاني</h3><p>AL-QUSAY MOTORCYCLES</p></div></article>
+<article class="video-card"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/DeMGzXl0tJc" title="فيديو دراجات القصي الثالث" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-info"><h3>دراجات القصي – الفيديو الثالث</h3><p>AL-QUSAY MOTORCYCLES</p></div></article>
+</div></div></section>
+<section class="section" id="features"><div class="container"><div class="section-head"><span class="eyebrow">لماذا القصي؟</span><h2>قوة في الأداء، وأناقة في التفاصيل</h2><p>تواصل معنا للاستفسار عن الدراجات والموديلات المتوفرة.</p></div><div class="details-grid"><article class="detail"><div class="detail-icon">⚙</div><h3>الأداء العملي</h3><p>دراجات للاستخدام اليومي ومتطلبات العمل والتنقل.</p></article><article class="detail"><div class="detail-icon">✦</div><h3>تصميم مميز</h3><p>ألوان وتفاصيل تمنح كل موديل طابعه الخاص.</p></article><article class="detail"><div class="detail-icon">◈</div><h3>معرض صور</h3><p>تصفح صور الدراجات وتفاصيلها قبل التواصل.</p></article><article class="detail"><div class="detail-icon">⌖</div><h3>موقع الوكالة</h3><p>صنعاء، نقم، أمام محطة الفلاح.</p></article><article class="detail"><div class="detail-icon">☎</div><h3>تواصل مباشر</h3><p>اتصل أو راسلنا للاستفسار عن الموديلات.</p></article><article class="detail"><div class="detail-icon">SH</div><h3>هوية القصي</h3><p>علامة AL-QUSAY وشعار SH في تصميم متناسق.</p></article></div></div></section>
+<section class="section" id="contact"><div class="container"><div class="section-head"><span class="eyebrow">نحن هنا لخدمتك</span><h2>تواصل مع <span class="gold">وكالة القصي</span></h2><p>للاستفسار عن الدراجات والموديلات المتوفرة، تواصل معنا مباشرة.</p></div><div class="contact-grid"><div class="contact-panel"><h3>بيانات التواصل</h3><div class="contact-row"><span class="contact-icon">☎</span><div><b>أرقام الهاتف</b><small>اضغط على الرقم للاتصال</small><div><a href="tel:+967772203792">772203792</a> · <a href="tel:+967771376413">771376413</a> · <a href="tel:+967777074371">777074371</a></div></div></div><div class="contact-row"><span class="contact-icon">⌖</span><div><b>عنوان الوكالة</b><small>صنعاء، نقم، أمام محطة الفلاح</small></div></div><div class="contact-row"><span class="contact-icon">f</span><div><b>فيسبوك</b><small><a href="https://www.facebook.com/share/1CLP3ztH4h/" target="_blank" rel="noopener">تابع صفحة دراجات القصي على فيسبوك ↗</a></small></div></div><div class="social-box"><a class="btn btn-gold" href="https://wa.me/967772203792" target="_blank" rel="noopener">راسلنا عبر واتساب</a><a class="btn btn-outline" href="https://www.facebook.com/share/1CLP3ztH4h/" target="_blank" rel="noopener">صفحتنا على فيسبوك</a></div></div><div class="contact-panel"><img class="brand-mark" src="sh-logo.png" alt="شعار SH"><h3>القصي.. حيث تلتقي القوة بالأناقة</h3><p style="color:#c8c8cf">منذ عام 2016، نسعى إلى تقديم خيارات متنوعة من الدراجات النارية لعملائنا.</p><p class="gold">AL-QUSAY MOTORCYCLES</p><p class="notice">تُؤكد الأسعار والمواصفات والتوفر مباشرة من الوكالة قبل الشراء.</p></div></div></div></section>
 </main>
-
-<footer class="footer">
-<div class="container">
-<span>© <span id="year"></span> وكالة القصي AL-QUSAY للدراجات النارية</span>
-<span>حيث تلتقي القوة بالأناقة | صنعاء – نقم</span>
-</div>
-</footer>
-
+<footer class="footer"><div class="container"><span>© <span id="year"></span> وكالة القصي AL-QUSAY للدراجات النارية</span><span>حيث تلتقي القوة بالأناقة | صنعاء – نقم</span></div></footer>
 <a class="floating" href="https://wa.me/967772203792" target="_blank" rel="noopener">◉ واتساب</a>
-
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة">
-<button id="closeLightbox" aria-label="إغلاق">×</button>
-<img id="lightboxImg" src="" alt="صورة دراجة مكبرة">
-</div>
-
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة"><button id="closeLightbox" aria-label="إغلاق">×</button><img id="lightboxImg" src="" alt="صورة دراجة مكبرة"></div>
 <script>
 const photos = [
-["1000618535.png","دراجة القصي المميزة"],
-["1000612934.png","دراجة القصي"],
-["1000611476.png","موديل من مجموعة القصي"],
-["1000610951.png","دراجة القصي النارية"],
-["1000607429.png","موديل القصي"],
-["1000606574.png","دراجة القصي"],
-["1000606584.png","تفاصيل الدراجة"],
-["1000606583.png","دراجة القصي"],
-["1000606575.png","موديل القصي"],
-["1000583275.png","دراجة القصي"],
-["1000103930.jpg","دراجة القصي"],
-["1000103919.jpg","موديل من مجموعة الوكالة"],
-["1000103922.jpg","دراجة القصي"],
-["1000103926.jpg","دراجة القصي"],
-["1000103924.jpg","موديل القصي"],
-["1000103921.jpg","دراجة القصي"],
-["1000103918.jpg","دراجة القصي"],
-["1000394755.jpg","صورة من مجموعة الوكالة"]
+["1000618535.png","دراجة القصي المميزة"],["1000612934.png","دراجة القصي"],["1000611476.png","موديل من مجموعة القصي"],["1000610951.png","دراجة القصي النارية"],["1000607429.png","موديل القصي"],["1000606574.png","دراجة القصي"],["1000606584.png","تفاصيل الدراجة"],["1000606583.png","دراجة القصي"],["1000606575.png","موديل القصي"],["1000583275.png","دراجة القصي"],["1000103930.jpg","دراجة القصي"],["1000103919.jpg","موديل من مجموعة الوكالة"],["1000103922.jpg","دراجة القصي"],["1000103926.jpg","دراجة القصي"],["1000103924.jpg","موديل القصي"],["1000103921.jpg","دراجة القصي"],["1000103918.jpg","دراجة القصي"],["1000394755.jpg","صورة من مجموعة الوكالة"]
 ];
-
-const gallery = document.getElementById("gallery");
-
-photos.forEach(([file,name]) => {
-  const card = document.createElement("article");
-  card.className = "product-card";
-
-  const imageBox = document.createElement("div");
-  imageBox.className = "product-image";
-  imageBox.tabIndex = 0;
-  imageBox.setAttribute("role","button");
-  imageBox.setAttribute("aria-label","تكبير الصورة");
-
-  const img = document.createElement("img");
-  img.src = file;
-  img.alt = name;
-  img.loading = "lazy";
-
-  const info = document.createElement("div");
-  info.className = "product-info";
-
-  const title = document.createElement("h3");
-  title.textContent = name;
-
-  const desc = document.createElement("p");
-  desc.textContent = "AL-QUSAY · دراجات القصي النارية";
-
-  const pill = document.createElement("span");
-  pill.className = "pill";
-  pill.textContent = "للاستفسار تواصل معنا";
-
-  imageBox.appendChild(img);
-  info.append(title,desc,pill);
-  card.append(imageBox,info);
-  gallery.appendChild(card);
-});
-
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.getElementById("navlinks");
-
-menuBtn.addEventListener("click",() => nav.classList.toggle("open"));
-nav.querySelectorAll("a").forEach(a =>
-  a.addEventListener("click",() => nav.classList.remove("open"))
-);
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightboxImg");
-
-function openImage(src,alt){
-  lightboxImg.src = src;
-  lightboxImg.alt = alt;
-  lightbox.classList.add("open");
-}
-
-document.querySelectorAll(".product-image").forEach(box => {
-  const img = box.querySelector("img");
-  box.addEventListener("click",() => openImage(img.src,img.alt));
-  box.addEventListener("keydown",e => {
-    if(e.key === "Enter" || e.key === " "){
-      e.preventDefault();
-      openImage(img.src,img.alt);
-    }
-  });
-});
-
-document.getElementById("closeLightbox").addEventListener("click",() => {
-  lightbox.classList.remove("open");
-});
-
-lightbox.addEventListener("click",e => {
-  if(e.target === lightbox) lightbox.classList.remove("open");
-});
-
-document.addEventListener("keydown",e => {
-  if(e.key === "Escape") lightbox.classList.remove("open");
-});
+const gallery=document.getElementById("gallery");
+photos.forEach(([file,name])=>{const card=document.createElement("article");card.className="product-card";const imageBox=document.createElement("div");imageBox.className="product-image";imageBox.tabIndex=0;imageBox.setAttribute("role","button");imageBox.setAttribute("aria-label","تكبير الصورة");const img=document.createElement("img");img.src=file;img.alt=name;img.loading="lazy";const info=document.createElement("div");info.className="product-info";const title=document.createElement("h3");title.textContent=name;const desc=document.createElement("p");desc.textContent="AL-QUSAY · دراجات القصي النارية";const pill=document.createElement("span");pill.className="pill";pill.textContent="للاستفسار تواصل معنا";imageBox.appendChild(img);info.append(title,desc,pill);card.append(imageBox,info);gallery.appendChild(card)});
+const menuBtn=document.getElementById("menuBtn"),nav=document.getElementById("navlinks");menuBtn.addEventListener("click",()=>nav.classList.toggle("open"));nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));document.getElementById("year").textContent=new Date().getFullYear();
+const lightbox=document.getElementById("lightbox"),lightboxImg=document.getElementById("lightboxImg");function openImage(src,alt){lightboxImg.src=src;lightboxImg.alt=alt;lightbox.classList.add("open")}document.querySelectorAll(".product-image").forEach(box=>{const img=box.querySelector("img");box.addEventListener("click",()=>openImage(img.src,img.alt));box.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openImage(img.src,img.alt)}})});document.getElementById("closeLightbox").addEventListener("click",()=>lightbox.classList.remove("open"));lightbox.addEventListener("click",e=>{if(e.target===lightbox)lightbox.classList.remove("open")});document.addEventListener("keydown",e=>{if(e.key==="Escape")lightbox.classList.remove("open")});
 </script>
 </body>
 </html>
